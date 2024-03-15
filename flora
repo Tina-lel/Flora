@@ -100,7 +100,7 @@ MOTD_VIEWER() {
 	then
 		echo -e "$(sed '/MOTD END/q' $DIRMAIN/tmp/main)\nPress Q to continue..." | less -c -R
 	else
-		echo -e "Press Q to continue..." | less -c -R
+		echo -e "No Motd found. Press Q to continue..." | less -c -R
 	fi
 	rm "$DIRMAIN/tmp/main"
 }
