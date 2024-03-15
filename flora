@@ -318,6 +318,7 @@ case $1 in
 				LOAD_CLIENT_CONFIG
 				LOGO
 				FUNCTIONS=( ${FUNCS[@]} "Add" )
+				echo -e "What server to join?"
 				MENU_TEST
 				clear
 				case $SELECTION in
