@@ -367,6 +367,7 @@ case $1 in
 					CLIENT_EXITER
 				;;
 				"!b" | "!back")
+					LEAVE_MESSAGE
 					SOCAT_KILLER
 					break
 				;;
