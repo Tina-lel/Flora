@@ -229,7 +229,7 @@ case $1 in
 			echo -e " \e[2;37mStarting in Server Mode...\e[m"
 			if [[ "$(head -n 1 $DIRMAIN/server/main)" != "---MOTD---" ]];
 			then
-				echo -e " \e[2;37mWriting Motd...\[m"
+				echo -e " \e[2;37mWriting Motd...\e[m"
 				WRITE_MOTD
 			fi
 			if [[ ! -f "$DIRMAIN/server/main.gpg" ]];
