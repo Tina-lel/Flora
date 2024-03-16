@@ -284,7 +284,7 @@ case $1 in
 					;;
 					motd)
 						LOAD_SERVER_CONFIG
-						echo -e " Writing Motd..."
+						echo -e " \e[2;37mWriting Motd...\e[m"
 						WRITE_MOTD
 						ENCRYPT_MAIN
 						COMPORT_HEARTBEAT
