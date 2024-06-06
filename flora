@@ -395,7 +395,7 @@ case $1 in
 					clear
 					echo -e ""
 					echo -e " !m | !motd		= view motd"
-					echo -e " !n | !neofetch	= send neofetch"
+					echo -e " !n | !neofetch  	= send neofetch"
 					echo -e " !r | !refresh		= refresh chat"
 					echo -e " !h | !help		= show this message"
 					echo -e " !b | !back		= disconnect and return"
