@@ -10,7 +10,7 @@ socat
 
 gpg
 
-Ussage:
+Usage:
 -
 
 ```
