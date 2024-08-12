@@ -17,13 +17,24 @@ HELPER() {
 	echo -e ""
 }
 ABOUT() {
-	echo -e " \e[1;35mFlora [$FLORA_VER]\e[m"
-	echo -e " By Tina_lel"
-	echo -e " Special Thanks:"
-	echo -e "	\e[0;35mJustus0405\e[m"
-	echo -e ""
-	echo -e " GitHub: https://github.com/Tina-lel/Flora"
-	echo -e ""
+
+        github_response=$(curl -s "https://api.github.com/repos/tina-lel/flora/contributors")
+
+        if [ $? -ne 0 ]; then
+                echo "Failed to get API response."
+        exit 1
+        fi
+
+        echo -e " \e[1;35mFlora [$FLORA_VER]\e[m"
+        echo -e " By Tina_lel"
+        echo -e ""
+        echo -e " Contributors:"
+        echo "$github_response" | grep '"login":' | awk -F '"' '{print $4}' | while read -r contributors; do
+                echo -e "\t\e[0;35m${contributors}\e[m"
+        done
+        echo -e ""
+        echo -e " GitHub: https://github.com/Tina-lel/Flora"
+        echo -e ""
 }
 GENERAL_CONFIGURATION() {
 	if [[ ! -d "$DIRMAIN" ]];
