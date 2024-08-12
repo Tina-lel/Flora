@@ -22,7 +22,7 @@ ABOUT() {
 
         if [ $? -ne 0 ]; then
                 echo "Failed to get API response."
-        exit 1
+        exit
         fi
 
         echo -e " \e[1;35mFlora [$FLORA_VER]\e[m"
