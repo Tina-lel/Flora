@@ -20,9 +20,10 @@ ABOUT() {
 
         github_response=$(curl -s "https://api.github.com/repos/tina-lel/flora/contributors")
 
-        if [ $? -ne 0 ]; then
+        if [[ $? -ne 0 ]];
+	then
                 echo "Failed to get API response."
-        exit
+        	exit
         fi
 
         echo -e " \e[1;35mFlora [$FLORA_VER]\e[m"
