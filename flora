@@ -55,7 +55,7 @@ GENERAL_CONFIGURATION() {
 }
 LOGO() {
 	echo -e ""
-	echo -e "    \e[1;35mFlora  $FLORA_VER\e[m"
+	echo -e "    \e[1;35mFlora $FLORA_VER\e[m"
 	echo -e "    by Tina_lel   \n"
 }
 
